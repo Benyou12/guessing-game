@@ -1,0 +1,23 @@
+<Application x:Class="PolyPaint.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Startup="App_OnStartup"
+             StartupUri="Vues/MainTransitions.xaml"
+             DispatcherUnhandledException ="App_OnDispatcherUnhandledException"
+             Exit="Application_Exit">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+              <ResourceDictionary Source="Vues/Styles/RegisterAndConnectControlTemplate.xaml"/>
+                <ResourceDictionary Source="Vues/Styles/ChatControlTemplate.xaml"/>
+                <ResourceDictionary Source="Vues/Styles/MainControlTemplate.xaml"/>
+                <ResourceDictionary Source="Vues/Styles/LobbyControlTemplate.xaml"/>
+                <ResourceDictionary Source="Vues/Styles/ListBoxNotHightlightTemplate.xaml" />
+
+                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="Blue" SecondaryColor="Teal" />
+              <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

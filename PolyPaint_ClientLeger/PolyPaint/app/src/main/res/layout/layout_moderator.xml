@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view_username_moderator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:maxWidth="300dp"
+        android:text="@string/textView_username"
+        android:textColor="?attr/textViewColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_incoming_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_timestamp_moderator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/textView_user_timestamp"
+        android:textColor="#aaa"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toEndOf="@+id/text_view_username"
+        app:layout_constraintTop_toTopOf="@+id/text_view_username"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_view_incoming_message_moderator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#EF5777"
+        android:maxWidth="300dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:text="@string/textView_incoming_message"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteY="43dp" />
+
+</LinearLayout>

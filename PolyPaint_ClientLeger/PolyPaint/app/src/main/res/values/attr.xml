@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="darkMode">
+        <!-- activity-->
+        <attr name="activityBackground" format="color"/>
+        <!-- TextView-->
+        <attr name="textViewColor" format="color"/>
+        <attr name="textViewSecondaryColor" format="color"/>
+        <!-- editText-->
+        <attr name="editTextColor" format="color"/>
+        <attr name="editTextHintColor" format="color"/>
+        <attr name="editTextRounded" format="reference"/>
+        <!-- button-->
+        <attr name="buttonTextColor" format="color"/>
+        <attr name="buttonBackground" format="reference"/>
+        <attr name="buttonBlack" format="reference"/>
+        <!-- cap-->
+        <attr name="buttonCapCircle" format="reference"/>
+        <attr name="buttonCapSquare" format="reference"/>
+        <!-- textView-->
+        <attr name="textColor" format="color"/>
+        <!-- autoComplete-->
+        <attr name="autoCompleteHintColor" format="color"/>
+        <attr name="autoCompleteBackgroundColor" format="color"/>
+        <attr name="autoCompleteTextColor" format="color"/>
+        <attr name="userStats" format="color"/>
+        <!-- backgroundView-->
+        <attr name="backgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

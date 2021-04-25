@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="?attr/activityBackground"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/conv_spinner"
+        layout="@layout/spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/userStats"
+        android:backgroundTint="?attr/userStats"
+        android:elevation="7dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/frame_conversations"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frame_conversations"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <include
+        android:id="@+id/menu_bar_messenger"
+        layout="@layout/navbar_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frame_conversations"
+        android:layout_width="400dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_bar_messenger">
+
+        <include
+            android:id="@+id/view_conversations"
+            layout="@layout/layout_conversations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_chat_log"
+        android:layout_width="880dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/frame_conversations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frame_conversations"
+        app:layout_constraintTop_toBottomOf="@+id/menu_bar_messenger">
+
+        <include
+            android:id="@+id/view_chat_log"
+            layout="@layout/layout_chat_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

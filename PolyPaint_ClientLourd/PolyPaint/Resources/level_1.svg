@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="clip-level_1">
+      <rect width="400" height="400"/>
+    </clipPath>
+  </defs>
+  <g id="level_1" clip-path="url(#clip-level_1)">
+    <rect width="400" height="400" fill="#fff"/>
+    <path id="Path_4" data-name="Path 4" d="M0,0H182.593V262.478L91.3,182.593,0,262.478Z" transform="translate(102 81)" fill="#ff7f4e"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="183" height="32" transform="translate(102 50)" fill="#ff4600"/>
+    <text id="_1" data-name="1" transform="translate(194 204)" fill="#fff" font-size="125" font-family="FredokaOne-Regular, Fredoka One"><tspan x="-25.438" y="0">1</tspan></text>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="59.5" cy="59.5" r="59.5" transform="translate(211 250)" fill="#00c797"/>
+    <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M21.737,51.365l-20.8-20.8a3.2,3.2,0,0,1,0-4.526l4.525-4.526a3.2,3.2,0,0,1,4.526,0L24,35.526,54.012,5.514a3.2,3.2,0,0,1,4.526,0l4.525,4.526a3.2,3.2,0,0,1,0,4.526l-36.8,36.8A3.2,3.2,0,0,1,21.737,51.365Z" transform="translate(239 281.423)" fill="#fff"/>
+    <path id="Path_5" data-name="Path 5" d="M0,0H182.593V262.478L91.3,182.593,0,262.478Z" transform="translate(102 81)" fill="#ffc107"/>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="183" height="32" transform="translate(102 50)" fill="#fa0"/>
+    <text id="_1-2" data-name="1" transform="translate(194 204)" fill="#fff" font-size="125" font-family="FredokaOne-Regular, Fredoka One"><tspan x="-25.438" y="0">1</tspan></text>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="59.5" cy="59.5" r="59.5" transform="translate(211 250)" fill="#00c797"/>
+    <path id="Icon_awesome-check-2" data-name="Icon awesome-check" d="M21.737,51.365l-20.8-20.8a3.2,3.2,0,0,1,0-4.526l4.525-4.526a3.2,3.2,0,0,1,4.526,0L24,35.526,54.012,5.514a3.2,3.2,0,0,1,4.526,0l4.525,4.526a3.2,3.2,0,0,1,0,4.526l-36.8,36.8A3.2,3.2,0,0,1,21.737,51.365Z" transform="translate(239 281.423)" fill="#fff"/>
+  </g>
+</svg>

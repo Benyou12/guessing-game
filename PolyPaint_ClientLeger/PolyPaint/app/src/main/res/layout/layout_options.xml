@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lang_ui_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="UI Mode"
+            android:textColor="?attr/textViewColor "
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp">
+
+            <Button
+                android:id="@+id/darkMode"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/circle_button_black"
+                android:padding="5dp"
+                android:tag="darkMode"
+                android:text="Dark"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/lightMode"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/cap_circle_white"
+                android:padding="5dp"
+                android:tag="lightMode"
+                android:text="Light"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lang_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Language"
+            android:textColor="?attr/textViewColor "
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/lang_fr"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/circle_button_black"
+                android:backgroundTint="#eee"
+                android:padding="5dp"
+                android:tag="french"
+                android:text="fr"
+                android:textColor="#aaa"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/lang_en"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/circle_button_black"
+                android:backgroundTint="#eee"
+                android:padding="5dp"
+                android:tag="french"
+                android:text="en"
+                android:textColor="#aaa"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

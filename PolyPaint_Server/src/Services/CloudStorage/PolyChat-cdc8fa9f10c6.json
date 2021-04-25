@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "polychat-9c90e",
+  "private_key_id": "cdc8fa9f10c623f4c683c055441a9602619bbe80",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCvNfvUHrFrqTKw\n7L6U+RGjQDr09P5JMrhF0TkexL62fHV4/ca8ZtY5Ri5tYgcDzPhkf4MbhRfzPMQr\noLPsfPmo+rQOvf/wle5aG8NeuuGehQ+KLCY4NkjSq69CamyeG7lqUjGDVgHGe6lL\nOuEz4ZyXIhjr/KuGpj479QPKHpgTh6UKno+lqiQg366XszHPgviAM9uCkAhXge9l\nfyrnY5XafJLHRqmrulXES76DpdlBGw9fQcx/BLk5Ne29F5uAsQuscWtCq18AC+YX\nqJgturTPD38+BAbvUv+7BjjtY5DRg6WwNJv9YXqHoxte7Fh4vjWhB/aRNnsrZGPO\ntna44XwNAgMBAAECggEAHtEo7QNFA4GsB9BsKPmx73vRotogi7FfFfCZ0l6aiLBV\nXSWNuf+AeGxuqBCQ2UtI+SwwXDvJnZ+3hVDrtJG6u8z0tI8YoDFOzgyKDXRjUKVo\nuU3Qnxx1LJDD77OWTSzlLN0uFkKfZ1DC0xeVGrH4/+AgcAluBe3hjlwnAXrmFrD/\neIUvv5mxZl/z0dJhqLwFWiRmycSMLEYKUiqux99dm4VDpRWd0F95TTUqR7r2cV65\npoE3kknAxZjfhGX6TTpRX/cuiRO/fMsKph5VTMI3rztP1U9j0S70XijjoFQqbmbe\nt812HiVhQP9DcOrLgcZMwZwvuveLlYz0+DQExfFpgQKBgQDcLYCNL6JntR8Un/x0\nMOg0vxV/RiUPjwUhPzuRUKugVulS2uyCVqB7rRtUmuQyfiJvTwDdI6cCju6WVLBV\nWWrIlqbBsnDJj1l7mP3qTWpxKwHBnzPFTFnec9MOk9QEVxYlFhy9Cc7s/EmaSSdZ\nxToYPvL+KTM490R2VbnHNbqZrQKBgQDLt5eTAAwzMRGuYelX/WYEWx6PzQicVQq0\nsZROwVV5kdBXnLpi5X7oqqULCS0BKnt6ho//EcgGf2x4zcDIKKM8klkZFwHfUQ9Z\nhhW3SmpT0i5ohmECksQPpFC64SCfGUezT80S3KoKdcYBoAkqkrIkRRQebJqTnmGn\nZogoLFV34QKBgH0qQNICKkjaZfjLmjBTPS3/ErFvptHZdAkacTqCqY5U2f8IBTtz\nE3g7SDYod2Fc4yZzuwH7qo2Bw5AiRLvAQTwWqGWkkwmCPFRO/MmdiM0crbrsTfnz\nFYOoRGsdDoIJH8WldGDimoeORCk5PO2DeSsfXfOuaDgSGRFMWngsyw9hAoGAOR+l\nECJeSWiEBbsM3JCAr84BNt+Of4/VLa/x31eVKT67BiY7mYmy2XkoSHztMrt/3m6n\nKCYLSc8nUoSXf0jt5QlAlKl/6+fl/vt7UWc7g3+XZdXwk/ElqyEvRgfkxtgm4+AH\nqDdaMw6tVD1U9Kwn6cW5C4L2oVgzF+bHXUR5PuECgYBVxd78Md9Q48KmzYxNLSe/\nmhcDUWebihaLGOjzqHQ4xir43aMljQ+WJtinzfdgFzDyDsRdhWDQzjcRzJUTrTr9\ncRoXcSr0oe7QyNq5qoNEwVdTiwhyApCgolCV9AQvuFFOuMpxDhU7vju5blV/gQ0R\nLygDLvDqrbasAVU6LW05aw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "node-file-upload@polychat-9c90e.iam.gserviceaccount.com",
+  "client_id": "106202086392177009429",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/node-file-upload%40polychat-9c90e.iam.gserviceaccount.com"
+}

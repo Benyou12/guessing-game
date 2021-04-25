@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="actionMenuTextColor">#000000</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- activity-->
+        <item name="activityBackground">@color/white</item>
+        <!-- editText-->
+        <item name="editTextColor">@color/black</item>
+        <item name="editTextHintColor">#aaa</item>
+        <item name="editTextRounded">@drawable/rounded_input</item>
+        <!-- textView-->
+        <item name="textViewColor">@color/black</item>
+        <item name="userStats">#f7f7f7</item>
+        <item name="textViewSecondaryColor">#aaaaaa</item>
+        <!-- AutoComplete-->
+        <item name="autoCompleteHintColor">#aaa</item>
+        <item name="autoCompleteBackgroundColor">#f2f2f2</item>
+        <item name="autoCompleteTextColor">@color/black</item>
+        <!-- buttonBlack -->
+        <item name="buttonBlack">@drawable/circle_button_black</item>
+        <!-- cap -->
+        <item name="buttonCapSquare">@drawable/cap_dark</item>
+        <item name="buttonCapCircle">@drawable/cap_circle_dark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--    Dark Mode-->
+    <style name="darktheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">#08c</item>
+        <!-- textView-->
+        <item name="textViewColor">@color/white</item>
+        <item name="userStats">#222</item>
+        <item name="textViewSecondaryColor">#fafafa</item>
+        <!-- editText-->
+        <item name="editTextColor">@color/white</item>
+        <item name="editTextHintColor">#f2f2f2</item>
+        <item name="editTextRounded">@drawable/rounded_input_dark</item>
+        <!-- activity-->
+        <item name="activityBackground">@color/black</item>
+        <!-- AutoComplete-->
+        <item name="autoCompleteHintColor">#aaa</item>
+        <item name="autoCompleteBackgroundColor">#333</item>
+        <item name="autoCompleteTextColor">#fff</item>
+        <!-- buttonBlack -->
+        <item name="buttonBlack">@drawable/circle_button_white</item>
+        <!-- buttonCap -->
+        <item name="buttonCapSquare">@drawable/cap_white</item>
+        <item name="buttonCapCircle">@drawable/cap_circle_white</item>
+    </style>
+</resources>

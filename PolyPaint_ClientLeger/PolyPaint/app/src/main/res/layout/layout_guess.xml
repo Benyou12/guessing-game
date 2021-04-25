@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="90dp"
+    android:background="@drawable/guess"
+    android:orientation="vertical"
+    android:outlineSpotShadowColor="#00000000">
+
+    <TextView
+        android:id="@+id/text_view_guess"
+        android:layout_width="243dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        android:width="200dp"
+        android:height="200dp"
+        android:text="Guess"
+        android:textAlignment="center"
+        android:textColor="#e67e22"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_guesser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_guess"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_guess"
+        app:layout_constraintStart_toStartOf="@+id/text_view_guess"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

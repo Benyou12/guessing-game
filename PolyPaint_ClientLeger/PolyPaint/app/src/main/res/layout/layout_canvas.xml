@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- colors -->
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_canvas_navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.polychat.views.CanvasView
+        android:id="@+id/canvas_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        android:scrollbarSize="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <Button
+        android:id="@+id/button_black_color"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/buttonBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_red_color"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/red"
+        app:layout_constraintBottom_toBottomOf="@+id/button_black_color"
+        app:layout_constraintStart_toEndOf="@+id/button_black_color"
+        app:layout_constraintTop_toTopOf="@+id/button_black_color" />
+
+    <Button
+        android:id="@+id/button_green_color"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/button_yellow_color"
+        app:layout_constraintStart_toEndOf="@+id/button_yellow_color"
+        app:layout_constraintTop_toTopOf="@+id/button_yellow_color" />
+
+    <Button
+        android:id="@+id/button_yellow_color"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/button_red_color"
+        app:layout_constraintStart_toEndOf="@+id/button_red_color"
+        app:layout_constraintTop_toTopOf="@+id/button_red_color" />
+
+    <Button
+        android:id="@+id/button_blue_color"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/button_green_color"
+        app:layout_constraintStart_toEndOf="@+id/button_green_color"
+        app:layout_constraintTop_toTopOf="@+id/button_green_color" />
+
+    <Button
+        android:id="@+id/button_pink_color"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/pink"
+        app:layout_constraintBottom_toBottomOf="@+id/button_blue_color"
+        app:layout_constraintStart_toEndOf="@+id/button_blue_color"
+        app:layout_constraintTop_toTopOf="@+id/button_blue_color" />
+
+    <Button
+        android:id="@+id/button_square_cap"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="60dp"
+        android:background="?attr/buttonCapSquare"
+        app:layout_constraintBottom_toBottomOf="@+id/button_pink_color"
+        app:layout_constraintStart_toEndOf="@+id/button_pink_color"
+        app:layout_constraintTop_toTopOf="@+id/button_pink_color" />
+
+    <Button
+        android:id="@+id/button_round_cap"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:background="?attr/buttonCapCircle"
+        app:layout_constraintBottom_toBottomOf="@+id/button_square_cap"
+        app:layout_constraintStart_toEndOf="@+id/button_square_cap"
+        app:layout_constraintTop_toTopOf="@+id/button_square_cap" />
+
+    <!--action buttons-->
+    <Button
+        android:id="@+id/button_clear"
+        android:tag="button_clear"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_canvas_action_button"
+        android:text="@string/clear"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button_undo"
+        android:tag="button_undo"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_canvas_action_button"
+        android:text="@string/undo"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/button_clear"
+        app:layout_constraintEnd_toStartOf="@+id/button_clear"
+        app:layout_constraintTop_toTopOf="@+id/button_clear" />
+
+    <Button
+        android:id="@+id/button_eraser"
+        android:tag="button_eraser"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_canvas_action_button"
+        android:backgroundTint="@color/red"
+        android:text="R"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/button_round_cap"
+        app:layout_constraintStart_toEndOf="@+id/button_round_cap"
+        app:layout_constraintTop_toTopOf="@+id/button_round_cap"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:hapticFeedbackEnabled="true"
+        android:scrollbarSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_eraser"
+        app:layout_constraintStart_toEndOf="@+id/button_eraser"
+        app:layout_constraintTop_toTopOf="@+id/button_eraser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

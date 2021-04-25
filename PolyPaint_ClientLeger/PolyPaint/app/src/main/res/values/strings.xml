@@ -1,0 +1,56 @@
+<resources>
+    <!--Localized strings for layouts-->
+    <string name="app_name">Fais-moi un dessin</string>
+    <string name="title_conversation_list">conversations</string>
+    <string name="title_conversation_detail">conversation Detail</string>
+    <string name="editText_first_name">First name</string>
+    <string name="editText_user_name">username</string>
+    <string name="editText_last_name">Last name</string>
+    <string name="editText_email">Email</string>
+    <string name="editText_password">Password</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="button_add_image">Add image</string>
+    <string name="button_already_have_account">Already have an account ?</string>
+    <string name="imageButton_content_description">Profile image</string>
+    <string name="button_sign_in">Sign in</string>
+    <string name="editText_welcome_message">Glad to see you back :)</string>
+    <string name="textView_user_full_name">User full name</string>
+    <string name="textView_username">Username</string>
+    <string name="textView_user_timestamp">timestamp</string>
+    <string name="textView_incoming_message">Incoming message</string>
+
+    <!--database string-->
+    <string name="users">users</string>
+    <!--SignIn class strings-->
+    <string name="sign_in_tag">#SignIn</string>
+    <string name="insert_email_and_password">Please insert your email and password</string>
+
+    <!--SignUp class strings-->
+    <string name="sign_up_tag">#SignUP</string>
+    <string name="error_message_fill_in_fields">Please fill in all the fields</string>
+    <string name="profile_image_error">Please choose a profile picture</string>
+    <string name="username_used_error">Username already used. Please choose another one!</string>
+    <string name="intent_type">image/*</string>
+
+    <!--Server class strings-->
+    <string name="successfully_connected">Successfully connected</string>
+    <string name="failure_sign_in">Something went wrong. Please try again</string>
+    <string name="successfully_signed_up">Successfully Singed Up</string>
+    <string name="failure_sign_up">Something went wrong!</string>
+    <string name="user_not_added">"Something went wrong. Please try again"</string>
+    <string name="user_successfully_added">User added</string>
+
+    <!--Network connection error message-->
+    <string name="connection_error_message">Please Check your internet connection and try again</string>
+
+    <!--AlertDilog Box -->
+    <string name="message_box_title">Error message</string>
+    <string name="negative_button_text">OK</string>
+
+    <!-- paint button's name-->
+    <string name="undo">undo</string>
+    <string name="clear">clear</string>
+    <string name="eraser">eraser</string>
+    <string name="messenger">Messenger</string>
+    <string name="play_another_game">Play another game</string>
+</resources>

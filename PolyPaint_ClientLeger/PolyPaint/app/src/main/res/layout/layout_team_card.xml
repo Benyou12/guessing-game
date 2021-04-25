@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/user_team_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/editTextRounded"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view_team_name"
+        android:tag="text_view_team_name"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Your team"
+        android:textColor="?attr/textViewColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/image_view_player1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view_player1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_view_player2"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/text_view_player2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Targarian"
+        android:textColor="?attr/textViewColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_player2"
+        app:layout_constraintStart_toEndOf="@+id/image_view_player2"
+        app:layout_constraintTop_toTopOf="@+id/image_view_player2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/text_view_player1_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tag="text_view_player1_role"
+        android:text="Drawer"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_player1_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_player1_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_view_player1_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Neil Josh"
+        android:textColor="?attr/textViewColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_player1"
+        app:layout_constraintStart_toEndOf="@+id/image_view_player1"
+        app:layout_constraintTop_toTopOf="@+id/image_view_player1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view_player2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_view_label"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/text_view_palyer2_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tag="text_view_palyer2_role"
+        android:text="Guesser"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_player2_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_player2_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+            android:id="@+id/text_view_team_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="100"
+            android:textColor="#08c"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_view_label" />
+
+    <TextView
+            android:id="@+id/text_view_label"
+            android:tag="text_view_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="?attr/textViewColor"
+            android:text="Points"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_team_score" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,239 @@
+﻿<Window x:Class="PolyPaint.Vues.MainTransitions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:transitionPage="clr-namespace:PolyPaint.Utils.Transitions"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:localization="clr-namespace:PolyPaint.Utils.Localization"
+         xmlns:converters="clr-namespace:PolyPaint.Converters"
+      mc:Ignorable="d" WindowState="Maximized" Title="Fais-moi un dessin">
+
+    <Window.Resources>
+        <converters:BoolToVisibleOrHidden x:Key ="visibilityConverter"  />
+        <converters:BoolToVisibleOrHiddenInverted x:Key ="visibilityInvertedConverter"  />
+    </Window.Resources>
+
+
+    <Grid>
+        <materialDesign:ColorZone HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Mode="Standard">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <materialDesign:ColorZone
+                    Grid.Row="0"
+                    VerticalAlignment="Top"
+                    Mode="Accent">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button
+                            Foreground="White"
+                            Style="{StaticResource MaterialDesignIconForegroundButton}"
+                            ToolTip="{localization:LocalizationExtension Homepage}"
+                            VerticalAlignment="Center"
+                            IsEnabled="{Binding IsVisible}"
+                            Click="Home">
+                            <materialDesign:PackIcon Kind="Home" />
+                        </Button>
+
+                        <Label 
+                                Grid.Column="1"
+                                Content="{localization:LocalizationExtension ApplicationName}"
+                                FontSize="18" 
+                                FontWeight="Medium" 
+                                VerticalAlignment="Center"
+                                Foreground="White"/>
+
+                        <StackPanel
+                            Visibility="{Binding IsVisible, Converter={StaticResource visibilityConverter}}"
+                            Grid.Column="2" Orientation="Horizontal" Margin="0 0 40 0" VerticalAlignment="Center">
+
+                            <Label 
+                            Content="{localization:LocalizationExtension VisualModeLabel}"
+                            VerticalAlignment="Center"
+                            Foreground="White"/>
+
+                            <ToggleButton
+                            Checked="ModeChangeChecked"
+                            Unchecked="ModeChangeUnChecked"
+                            Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
+                            ToolTip="{localization:LocalizationExtension VisualModeLabel}"
+                            IsChecked="True"/>
+
+                        </StackPanel>
+
+                        <Button
+                            Visibility="{Binding IsVisible, Converter={StaticResource visibilityConverter}}"
+                                Grid.Column="4"
+                                Style="{StaticResource MaterialDesignFlatButton}"
+                                Click="NavigateToMessages"
+                                ToolTip="{localization:LocalizationExtension MessagesGames}"
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Content="{localization:LocalizationExtension MessagesGames}"/>
+
+                        <Button
+                            Visibility="{Binding IsVisible, Converter={StaticResource visibilityConverter}}"
+                                Grid.Column="5"
+                                Style="{StaticResource MaterialDesignFlatButton}"
+                                Click="NavigateToUsers"
+                                ToolTip="{localization:LocalizationExtension Users}"
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Content="{localization:LocalizationExtension Users}"/>
+
+
+                        <materialDesign:PopupBox
+                            Visibility="{Binding IsVisible, Converter={StaticResource visibilityConverter}}"
+                                Grid.Column="6"
+                                StaysOpen="False"
+                                VerticalAlignment="Center"
+                                PlacementMode="BottomAndAlignRightEdges"
+                                IsEnabled="{Binding IsChecked, ElementName=PopupEnabled}"
+                                Foreground="White">
+                            <StackPanel Width="160">
+                                <ListBox  MouseLeftButtonUp="UIElement_OnPreviewMouseDown" >
+                                    <TextBlock
+                                        x:Name="userProfile"
+                                        MouseLeftButtonUp="UserProfile"
+                                        Text="{localization:LocalizationExtension MyProfile}" Margin="10 0" />
+
+                                    <TextBlock
+                                        x:Name="tutorial"
+                                        MouseLeftButtonUp="Tutorial"
+                                        Text="{localization:LocalizationExtension Tutorial}" Margin="10 0"/>
+
+                                    <TextBlock
+                                        x:Name="logout"
+                                        MouseLeftButtonUp="Logout"
+                                        Text="{localization:LocalizationExtension SignOutButton}" Margin="10 0" />
+
+                                </ListBox>
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+
+                        <!-- <ComboBox 
+                        Name="cboxLangue"  
+                        Grid.Column="2"
+                        FontSize="18"
+                        Margin="0,5,0,5"
+                        Width="100"
+                        SelectionChanged="LanguageChange"
+                        ToolTip="{localization:LocalizationExtension LanguageLabel}">
+                            <ComboBoxItem 
+                            Name="FrenchLanguage" 
+                            Content="{localization:LocalizationExtension FrenchLanguageItem}"/>
+                            <ComboBoxItem 
+                            Name="EnglishLanguage" 
+                            Content="{localization:LocalizationExtension EnglishLanguageItem}"/>
+                        </ComboBox>
+
+
+                        <Border
+                        Grid.Column="4"  
+                        CornerRadius="25" 
+                        Height="35" 
+                        Width="35"
+                        Background="White"
+                        MouseLeftButtonUp="Home">
+                            <Border 
+                            CornerRadius="25" 
+                            ToolTip="{localization:LocalizationExtension Home}"
+                            BorderBrush="DarkGray" 
+                            BorderThickness="2" 
+                            Height="35" 
+                            Width="35">
+                                <Border.Background >
+                                    <ImageBrush 
+                                    ImageSource="..\..\Resources\Home.png" />
+                                </Border.Background>
+                            </Border>
+                        </Border>
+
+                        <Border
+                        Grid.Column="3"  
+                        MouseLeftButtonUp="UserProfile">
+                            <Border 
+                            CornerRadius="25" 
+                            ToolTip="{localization:LocalizationExtension UserProfile}"
+                            
+                            
+                            
+                            BorderBrush="DarkGray" 
+                            BorderThickness="2" 
+                            Height="35" 
+                            Width="35">
+                                <Border.Background >
+                                    <ImageBrush 
+                                    x:Name="profileImageBtn"
+                                    ImageSource="..\..\Resources\Home.png" />
+                                </Border.Background>
+                            </Border>
+                        </Border>
+
+                        <Border
+                      Grid.Column="5"
+                        MouseLeftButtonUp="Tutorial">
+                            <Border 
+                            CornerRadius="25" 
+                            ToolTip="{localization:LocalizationExtension Tutorial}"
+                            BorderBrush="DarkGray" 
+                            BorderThickness="2" 
+                            Height="35" 
+                            Width="35">
+                                <Border.Background >
+                                    <ImageBrush   
+                                    ImageSource="..\..\Resources\Tutorial.png" />
+                                </Border.Background>
+                            </Border>
+                        </Border>
+
+                        <Border
+                        MouseLeftButtonUp="Logout"
+                        Grid.Column="6" 
+                        CornerRadius="25" 
+                        Height="35" 
+                        Width="35"
+                        Background="White" >
+                            <Border 
+                            CornerRadius="25" 
+                            ToolTip="{localization:LocalizationExtension SignOutButton}"
+                            BorderBrush="DarkGray" 
+                            BorderThickness="2" 
+                            Height="35" 
+                            Width="35">
+                                <Border.Background >
+                                    <ImageBrush   
+                                    ImageSource="..\..\Resources\Logout.png" />
+                                </Border.Background>
+                            </Border>
+                        </Border>-->
+                    </Grid>
+
+                </materialDesign:ColorZone>
+
+                <!--https://www.codeproject.com/Articles/197132/Simple-WPF-Page-Transitions-->
+                <transitionPage:TransitionPage Grid.Row="1" x:Name="transitionPageControl" TransitionType="SlideAndFade" />
+            </Grid>
+            
+        </materialDesign:ColorZone>
+     
+    </Grid>
+</Window>

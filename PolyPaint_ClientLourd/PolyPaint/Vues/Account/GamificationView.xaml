@@ -1,0 +1,526 @@
+﻿<UserControl x:Class="PolyPaint.Vues.Account.GamificationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:localization="clr-namespace:PolyPaint.Utils.Localization"
+             xmlns:converters="clr-namespace:PolyPaint.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <converters:DateTimeConverter x:Key="dateTimeConverter" />
+        <converters:LoginStatsDisplayConverter x:Key ="loginConverter"  />
+        <converters:BoolToVisibleOrHidden x:Key ="visibilityConverter"  />
+        <converters:BoolToVisibleOrHiddenInverted x:Key ="visibilityInvertedConverter"  />
+        <converters:BadgeImageConverter  x:Key="badgeImageConverter" />
+        <converters:BadgeDescriptionConverter x:Key="badgeDescriptionConverter" />
+        <converters:BadgeNameConverter x:Key="badgeNameConverter" />
+    </UserControl.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="320"/>
+            </Grid.ColumnDefinitions>
+
+
+                <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="10" Background="#22000000" Margin="0 0 20 0">
+                    <Ellipse  
+                        HorizontalAlignment="Center"
+                        Grid.Column="0"
+                        Margin="15"
+                        Width="160" 
+                        Height="160" 
+                        StrokeThickness="1" 
+                        Stroke="Black">
+                        <Ellipse.Fill>
+                            <ImageBrush
+                                       x:Name="UserImage" ImageSource="{Binding Path=CurrentConnectedUser.ProfileImgURL}"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <Image 
+                    Width="140" 
+                    Height="140" 
+                    HorizontalAlignment="Center"
+                    Grid.Row="1"
+                    Margin="90 -100 0 0">
+                        <Image.Source>
+                            <BitmapImage UriSource="{Binding CurrentConnectedUser.UserGamification.Level.IMG}" />
+                        </Image.Source>
+                    </Image>
+
+                <StackPanel Margin="15 -20 15 15">
+                    <TextBlock 
+                        Margin="15,20,10,0"
+                        FontSize="14" 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Text="{localization:LocalizationExtension RegisterUsernameInput}" 
+                        Style="{StaticResource MaterialDesignBody1TextBlock}"/>
+
+                    <TextBlock 
+                        Margin="15,0,10,0"
+                        Text="{Binding Path=CurrentConnectedUser.Username}"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Style="{StaticResource MaterialDesignDisplay1TextBlock}"/>
+
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Margin="15,10,10,0"
+                        FontSize="14" 
+                        Text="{localization:LocalizationExtension RegisterFirstNameInput}" 
+                        Style="{StaticResource MaterialDesignBody1TextBlock}"/>
+
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="15,0,10,0"
+                        Text="{Binding Path=CurrentConnectedUser.FirstName}"
+                        Style="{StaticResource MaterialDesignDisplay1TextBlock}"/>
+
+                    <TextBlock 
+                        Margin="15,10,10,0"
+                        FontSize="14" 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Text="{localization:LocalizationExtension RegisterLastNameInput}" 
+                        Style="{StaticResource MaterialDesignDisplay1TextBlock}"/>
+
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" 
+                        Text="{Binding Path=CurrentConnectedUser.LastName}"
+                        Margin="15,0,10,0"
+                        TextWrapping="Wrap"
+                        Style="{StaticResource MaterialDesignDisplay1TextBlock}"/>
+
+                    <TextBlock 
+                        Margin="15,10,10,0"
+                        FontSize="14" 
+                        FontWeight="Medium" 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        TextWrapping="Wrap"
+                        Text="{localization:LocalizationExtension RegisterEmailInput}" 
+                        Style="{StaticResource MaterialDesignBody1TextBlock}"/>
+
+                    <TextBlock 
+                        Text="{Binding Path=CurrentConnectedUser.Email}"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="15,0,10,10"
+                        Style="{StaticResource MaterialDesignDisplay1TextBlock}"/>
+                </StackPanel>
+
+                   
+
+                </StackPanel>
+
+               
+      
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label 
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Bottom"
+                        
+                                          FontSize="14" 
+                                          FontWeight="Medium" 
+                                          
+                                          
+                                          Padding="0"
+                        
+                                          Content="{localization:LocalizationExtension ScoreLabel}" />
+
+                <Label 
+                                          Grid.Row="0"
+                                          Grid.Column="1"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Bottom"
+                        
+                                          FontSize="14" 
+                                          FontWeight="Medium" 
+                                          
+                                          
+                                          Padding="0"
+                        
+                                          Content="{localization:LocalizationExtension VictoriesLabel}" />
+
+                <Label 
+                                          x:Name="Score"
+                                          Grid.Row="1"
+                                          Grid.Column="0"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Top"
+                        
+                                          FontSize="22" 
+                                          
+                                          
+                                          
+                                          Padding="0"
+                                            
+                                          Content="{Binding Path=CurrentConnectedUser.UserGamification.Points}" />
+                <Label 
+                                          x:Name="Victories"
+                                          Grid.Row="1"
+                                          Grid.Column="1"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Top"
+                        
+                                          FontSize="22" 
+                                          
+                                          
+                                          
+                                          Padding="0"
+                        
+                                          Content="{Binding Path=CurrentConnectedUser.UserGameStats.Victories}" />
+                <TextBlock 
+                                          x:Name="ConnexionHistory"
+                                          Grid.Row="2"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"
+                                          HorizontalAlignment="Center"
+                                          FontWeight="Bold"
+                                          Margin="15,0,0,0"
+                                          Text="{localization:LocalizationExtension ConnexionHistory}"
+                                          Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+
+                <Border
+                                          Grid.Row="3"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"
+                                          HorizontalAlignment="Stretch">
+
+                    <ListBox
+                        HorizontalAlignment="Center"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Path=CurrentConnectedUser.UserAuthStats}"
+                            >
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <materialDesign:Card Width="240" HorizontalAlignment="Stretch" Padding="20 10">
+                                        <StackPanel>
+                                            <Border
+                                                Visibility="{Binding IsLoggedIn , Converter={StaticResource visibilityConverter}}"
+                                                    IsEnabled="{Binding IsLoggedIn , Converter={StaticResource visibilityConverter}}">
+                                                <TextBlock
+                                                    FontWeight="Black"
+                                                    HorizontalAlignment="Left"
+                                                    Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                                    
+                                                    Text="{localization:LocalizationExtension LoginSignInButton}"  />
+                                                
+                                            </Border>
+                                            <Border
+                                                Visibility="{Binding IsLoggedIn , Converter={StaticResource visibilityInvertedConverter}}"
+                                                    IsEnabled="{Binding IsLoggedIn , Converter={StaticResource visibilityInvertedConverter}}">
+                                                <TextBlock
+                                                    FontWeight="Black"
+                                                    HorizontalAlignment="Left"
+                                                    Style="{StaticResource MaterialDesignCaptionTextBlock}"
+                                                    
+                                                    Text="{localization:LocalizationExtension SignOutButton}"  />
+                                            </Border>
+
+                                            <TextBlock
+                                                Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                                Text="{Binding Path=TimeStamp,Converter={StaticResource dateTimeConverter}}"  />
+                                        </StackPanel>
+                                    </materialDesign:Card>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ListBox>
+                </Border>
+            </Grid>
+
+
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label 
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Bottom"
+                        
+                                          FontSize="14" 
+                                          FontWeight="Medium" 
+                                          
+                                          
+                                          Padding="0"
+                        
+                                          Content="{localization:LocalizationExtension DefeatsLabel}" />
+
+                <Label 
+                                          Grid.Row="0"
+                                          Grid.Column="1"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Bottom"
+                        
+                                          FontSize="14" 
+                                          FontWeight="Medium" 
+                                          
+                                          
+                                          Padding="0"
+                        
+                                          Content="{localization:LocalizationExtension BadgesEarned}" />
+
+                <Label 
+                                          x:Name="Defeats"
+                                          Grid.Row="1"
+                                          Grid.Column="0"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Top"
+                        
+                                          FontSize="22" 
+                                          
+                                          
+                                          
+                                          Padding="0"
+                        
+                                          Content="{Binding Path=CurrentConnectedUser.UserGameStats.Failures}" />
+                <Label 
+                                          x:Name="BadgesEarned"
+                                          Grid.Row="1"
+                                          Grid.Column="1"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Top"
+                        
+                                          FontSize="22" 
+                                          
+                                          
+                                          
+                                          Padding="0"
+                        
+                                          Content="{Binding Path=CurrentConnectedUser.BadgesEarned}" />
+                <TextBlock 
+                                          x:Name="GameHistory"
+                                          Grid.Row="2"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"
+                                          HorizontalAlignment="Center"
+                                          FontWeight="Bold"
+                                          Margin="15,0,0,0"
+                                          Text="{localization:LocalizationExtension GameHistory}"
+                                          Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+                <Border
+                                          Grid.Row="3"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"
+                                          HorizontalAlignment="Center">
+
+                    <ListBox 
+                             ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Path=CurrentConnectedUser.UserGameStatsHistory}"
+                            >
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <materialDesign:Card
+                                    Background="#03a9f4"
+                                    Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                    Padding="0"
+                                    Width="240">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition
+                                                     Height="Auto" />
+                                            <RowDefinition
+                                                     Height="Auto" />
+                                            <RowDefinition
+                                                     Height="Auto" />
+                                            <RowDefinition
+                                                     Height="Auto" />
+                                            <RowDefinition
+                                                     Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="16 10 16 0" Text="{localization:Localization GamificationYourTeamPoints}"/>
+                                        <TextBlock
+                                                Grid.Row="1"
+                                            Grid.Column="0"
+                                                Margin="16 0 16 0"
+                                                Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding MyTeamResult}">
+                                        </TextBlock>
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Margin="16 10 16 0" TextWrapping="Wrap" Text="{localization:Localization GamificationOtherTeamPoints}"/>
+                                        <TextBlock
+                                                Grid.Row="1"
+                                            Grid.Column="1"
+                                                Margin="16 0 16 0"
+                                                Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding OtherTeamResult}">
+                                        </TextBlock>
+                                        <Separator Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"  Style="{StaticResource MaterialDesignLightSeparator}" />
+                                        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                                            <TextBlock   Margin="16 0 16 8" VerticalAlignment="Center" HorizontalAlignment="Left"  
+                                                    Text="{Binding TimeStamp,Converter={StaticResource dateTimeConverter}}" Style="{StaticResource MaterialDesignBody2TextBlock}"/>
+                                            <WrapPanel Orientation="Horizontal" Margin="10">
+                                                <ItemsControl ItemsSource="{Binding Names,UpdateSourceTrigger=PropertyChanged}">
+                                                    <ItemsControl.ItemsPanel>
+                                                        <ItemsPanelTemplate>
+                                                            <StackPanel />
+                                                        </ItemsPanelTemplate>
+                                                    </ItemsControl.ItemsPanel>
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <materialDesign:Chip
+                                                                Margin="4 2"
+                                                                Content="{Binding}" />
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>
+                                            </WrapPanel>
+                                        </StackPanel>
+                                        
+                                    </Grid>
+                                </materialDesign:Card>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+
+                    </ListBox>
+
+                </Border>
+
+            </Grid>
+
+
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Label 
+                                          Grid.Row="0"
+                                          Grid.Column="3"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Left"
+                                          Content="" />
+
+
+                <Label 
+                                          Grid.Row="1"
+                                          Grid.Column="3"
+                                          Margin="15,0,0,0"
+                                          HorizontalAlignment="Left"
+                                          FontWeight="Bold"
+                                          Content="" />
+
+                <TextBlock 
+                                          x:Name="Badges"
+                                          Grid.Row="2"
+                                          Grid.Column="3"
+                                          HorizontalAlignment="Center"
+                                          FontWeight="Bold"
+                                          Margin="15,0,0,0"
+                                          Text="{localization:LocalizationExtension Badges}"
+                                          Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+
+
+                <Image 
+                                           Grid.Row="2"
+                                           Grid.Column="3"
+                                           HorizontalAlignment="Center"
+                                           Margin="15,0,0,0"
+                                           Width="100" 
+                                           Height="100"  
+                        
+                     
+                        />
+
+
+                <Border
+                                          Grid.Row="3"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"
+                                          HorizontalAlignment="Center">
+
+                    <ListBox 
+                             ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Path=CurrentConnectedUser.UserGamification.Badges}"
+                            >
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <materialDesign:Card Width="240" HorizontalAlignment="Stretch" Padding="20 10">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="55" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Height="55"
+                                                 Source="{Binding Path=Badge, Converter={StaticResource badgeImageConverter}}" />
+
+                                        <StackPanel Margin="8 0 0 0" Grid.Column="1">
+
+                                            <TextBlock FontSize="16" LineHeight="16" Text="{Binding Path=Badge, Converter={StaticResource badgeNameConverter}}" Style="{StaticResource MaterialDesignTitleTextBlock}" TextWrapping="Wrap" />
+                                            <TextBlock Text="{Binding Path=Badge,Converter={StaticResource badgeDescriptionConverter}}" TextWrapping="Wrap" />
+                                        </StackPanel>
+                                    </Grid>
+                                </materialDesign:Card>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+                    </ListBox>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</UserControl>

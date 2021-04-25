@@ -1,0 +1,351 @@
+{
+  "welcome_Back": {
+    "en": "Glad to see you back :)",
+    "fr": "Bonjour, heureux de te revoir :)"
+  },
+  "button_already_have_account" :
+  {
+    "en" : "Already have an account?",
+    "fr" : "Avez vous déjà un compte?"
+  },
+  "button_profile_img" :
+  {
+    "en" : "Add image",
+    "fr" : "Ajouter une image"
+  },
+  "input_username" :
+  {
+    "en" : "Username",
+    "fr" : "Nom d'utilisateur"
+  },
+  "input_firstName" :
+  {
+    "en" : "First name",
+    "fr" : "Prénom"
+  },
+  "input_lastName" :
+  {
+    "en" : "Last name",
+    "fr" : "Nom"
+  },
+  "input_email" :
+  {
+    "en" : "Email",
+    "fr" : "Email"
+  },
+  "input_password" :
+  {
+    "en" : "Password",
+    "fr" : "mot de passe"
+  },
+  "input_email_sign_in": {
+    "en": "email",
+    "fr": "email"
+  },
+  "input_password_sign_in": {
+    "en": "password",
+    "fr": "mot de passe"
+  },
+  "button_sign_in": {
+    "en": "SIGN IN",
+    "fr": "SE CONNECTER"
+  },
+  "button_sign_up": {
+    "en": "Sign up with email",
+    "fr": "S'enregistrer avec email"
+  },
+  "edit_text_search_conversation": {
+    "en": "search a conversation",
+    "fr": "Chercher une conversation"
+  },
+  "editText_new_message": {
+    "en": "Write message ...",
+    "fr": "Ecrire un message ..."
+  },
+  "button_send_message": {
+    "en": "Send",
+    "fr": "Envoyer"
+  },
+  "text_view_team_name": {
+    "en": "Your team",
+    "fr": "Ton équipe"
+  },
+  "text_view_player1_role": {
+    "en": "Drawer",
+    "fr": "Dessinateur"
+  },
+  "text_view_palyer2_role": {
+    "en": "Drawer",
+    "fr": "Dessinateur"
+  },
+  "text_view_label": {
+    "en": "Points",
+    "fr": "Points"
+  },
+  "text_view_scoreboard":
+  {
+    "en": "ScoreBoard",
+    "fr": "Résultat"
+  },
+  "team_label" :
+  {
+    "en" : "Your team",
+    "fr" : "Ton équipe"
+  },
+  "opponent_label" :
+  {
+    "en" : "Opponents",
+    "fr" : "Adversaires"
+  },
+  "player_role_action" :
+  {
+    "en" : "Word to guess",
+    "fr" : "mot à deviner"
+  },
+  "input_guess" :
+  {
+    "en" : "type your guess",
+    "fr" : "Saisir un mot"
+  },
+  "word_to_draw" :
+  {
+    "en" : "Rabbit",
+    "fr" : "Lapin"
+  },
+  "button_clear" :
+  {
+    "en" : "Clear",
+    "fr" : "Effacer tout"
+  },
+  "button_clear_guesser" :
+  {
+    "en" : "Clear",
+    "fr" : "Effacer tout"
+  },
+  "button_undo" :
+  {
+    "en" : "Undo",
+    "fr" : "Annuler"
+  },
+  "text_view_active_groups" :
+  {
+    "en" : "Join a group",
+    "fr" : "Rejoindre un groupe"
+  },
+  "button_eraser" :
+  {
+    "en" : "E",
+    "fr" : "E"
+  },
+  "button_add_group" :
+  {
+    "en" : "Create",
+    "fr" : "Créer"
+  },
+  "button_start_game" :
+  {
+    "en" : "Start the game",
+    "fr" : "Commencer le jeu"
+  },
+  "textView_lobby_title" :
+  {
+    "en" : "Game",
+    "fr" : "Partie"
+  },
+  "button_join_group" :
+  {
+    "en" : "Join",
+    "fr" : "Joindre"
+  },
+  "text_view_group_name" :
+  {
+    "en" : "Game",
+    "fr" : "Partie"
+  },
+  "AlertBox_New_Conversation_Title" :
+  {
+    "en" : "New Conversation",
+    "fr" : "Nouveau canal de discussion"
+  },
+  "editTextNewConversation" :
+  {
+    "en" :  "Please type the new conversation name",
+    "fr" : "Veuillez saisir un nom du nouveau canal"
+  },
+  "AlertBox_New_Conversation_Create" :
+  {
+    "en" :  "Create",
+    "fr" : "Créer"
+  },
+  "AlertBox_New_Conversation_Cancel" :
+  {
+    "en" :  "Cancel",
+    "fr" : "Annuler"
+  },
+  "AlertBox_Join_Conversation_Title" :
+  {
+    "en" : "Selected Conversation : ",
+    "fr" : "Le canal choisi : "
+  },
+  "AlertBox_Join_Conversation_Message" :
+  {
+    "en" : "Do you want to join this conversation",
+    "fr" : "Voulez-vous joindre ce canal? "
+  },
+  "Yes_Button" :
+  {
+    "en" : "Yes",
+    "fr" : "Oui"
+  },
+  "No_Button" :
+  {
+    "en" : "No",
+    "fr" : "Non"
+  },
+  "Invite_Button" :
+  {
+    "en" : "Invite",
+    "fr" : "Inviter"
+  },
+  "AlertBox_Invite_Hint" :
+  {
+    "en" : "Type a username",
+    "fr" : "Saisir un pseudo"
+  },
+  "AlertBox_Invite_Conversation_Title" :
+  {
+    "en" : "Conversation: ",
+    "fr" : "Canal: "
+  },
+  "AlertBox_Invite_Message" :
+  {
+    "en" : "Do you want to invite : ",
+    "fr" : "voulez-vous inviter : "
+  },
+  "text_view_invite" :
+  {
+    "en" : "Invite",
+    "fr" : "Inviter"
+  },
+  "text_view_leave" :
+  {
+    "en" : "Leave",
+    "fr" : "Quitter"
+  },
+  "text_view_history" :
+  {
+    "en" : "History",
+    "fr" : "Historique"
+  },
+  "auto_complete_invitation" :
+  {
+    "en" : "Type username",
+    "fr" : "Saisir un pseudo"
+  },
+  "AlertBox_Leave_Conversation_Title" :
+  {
+    "en" : "Conversation : ",
+    "fr" : "Canal : "
+  },
+  "AlertBox_Leave_Conversation_Message" :
+  {
+    "en" : "Do you want to leave this conversation?",
+    "fr" : "Voulez-vous quitter ce canal?"
+  },
+  "user_profile_firstName" :
+  {
+    "en" : "First name",
+    "fr" : "Prénom"
+  },
+  "user_profile_lastName" :
+  {
+    "en" : "Last name",
+    "fr" : "Nom"
+  },
+  "user_profile_email" :
+  {
+    "en" : "Email",
+    "fr" : "Courriel"
+  },
+  "user_profile_pseudo" :
+  {
+    "en" : "Username",
+    "fr" : "Pseudonyme"
+  },
+  "user_profile_score" :
+  {
+    "en" : "Score",
+    "fr" : "Score"
+  },
+  "user_profile_number_badges" :
+  {
+    "en" : "Badges earned",
+    "fr" : "Badges gagnés"
+  },
+  "user_profile_victories" :
+  {
+    "en" : "Victories",
+    "fr" : "Victoires"
+  },
+  "user_profile_defeat" :
+  {
+    "en" : "Defeats",
+    "fr" : "Défaites"
+  },
+  "user_profile_connexion_history" :
+  {
+    "en" : "Connections history",
+    "fr" : "Historique de connexions"
+  },
+  "user_profile_game_history" :
+  {
+    "en" : "Games played",
+    "fr" : "Jeux joués"
+  },
+  "user_profile_badges" :
+  {
+    "en" : "Badges",
+    "fr" : "Badges"
+  },
+  "darkMode" :
+  {
+    "en" : "Dark",
+    "fr" : "Nuit"
+  },
+  "lightMode" :
+  {
+    "en" : "Light",
+    "fr" : "Jour"
+  },
+  "leave_conversation_dialog_box_title" :
+  {
+    "en" : "Leave conversation",
+    "fr" : "Quitter la conversation"
+  },
+  "leave_conversation_dialog_box_message" :
+  {
+    "en" : "You have successfully left the conversation",
+    "fr" : "Vous avez quitté cette conversation avec succès"
+  },
+  "btn_end_of_game" :
+  {
+    "en" : "Play another game ?",
+    "fr" : "Jouer un autre jeu ?"
+  },
+  "AlertBox_Accept_Conversation_Title" : {
+    "fr" : "Tu es invité à la conversation ",
+    "en" : "You are invited to the conversation "
+   },
+  "AlertBox_Accept_Conversation_By" : {
+    "fr" : " par : ",
+    "en" : " by : "
+  },
+  "AlertBox_Accept_Conversation_message" : {
+    "fr" : "Acceptez-vous l'invitation?",
+    "en" : "Do you accept the invitation?"
+  },
+  "p_curtain" : {
+    "fr" : "S'il vous plait, selectioner un utilisateur",
+    "en" : "Please, Select a user"
+  }
+}

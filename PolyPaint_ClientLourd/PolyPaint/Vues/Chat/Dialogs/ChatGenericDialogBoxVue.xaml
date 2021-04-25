@@ -1,0 +1,55 @@
+﻿<Window x:Class="PolyPaint.Vues.Chat.ChatGenericDialogBoxVue"
+              WindowStartupLocation="CenterScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:localization="clr-namespace:PolyPaint.Utils.Localization"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+    
+    <materialDesign:ColorZone Mode="Standard" VerticalAlignment="Stretch">
+
+        <Grid VerticalAlignment="Center">
+            <StackPanel Width="auto" Margin="20">
+                <StackPanel Margin="0 0 0 16">
+                    <TextBlock HorizontalAlignment="Center" Width="auto" x:Name="dialogInformationTxt" TextWrapping="Wrap"
+                               Text="{localization:LocalizationExtension CreateNewChannelLabel}"
+                                   FontSize="18"
+                                   Style="{StaticResource MaterialDesignTitleTextBlock}" />
+
+                    <TextBox TextWrapping="Wrap"
+                        x:Name="dialogInputTxt"
+                      materialDesign:HintAssist.Hint="{localization:LocalizationExtension CreateNewChannelLabel}"
+                        Text="{Binding ChannelName, Mode=TwoWay}"
+                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+                </StackPanel>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="cancelBtn" Content="{localization:LocalizationExtension CreateNewChannelCancel}"
+                                    Command="{Binding CancelCreateChannelCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                                    Width="150"
+                                    Margin="10 0 0 0"
+                                    HorizontalAlignment="Left"
+                                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                    Grid.Column="1"/>
+
+                    <Button x:Name="confirmBtn" Content="{localization:LocalizationExtension CreateNewChannelCreate}"
+                                    Command="{Binding CreateChannelCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                                    Width="150"
+                                    HorizontalAlignment="Right"
+                                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                                    Grid.Column="0"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </materialDesign:ColorZone>
+</Window>

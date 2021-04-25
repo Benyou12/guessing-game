@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="880dp"
+    android:layout_height="match_parent"
+        android:background="?attr/activityBackground"
+    android:orientation="vertical">
+    <!--    todo: fix layout structure-->
+
+    <TextView
+        android:id="@+id/text_view_scoreboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:gravity="clip_horizontal|center|clip_vertical"
+        android:tag="text_view_scoreboard"
+        android:text="Scoreboard"
+        android:textAlignment="center"
+        android:textColor="?attr/textViewColor"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_scoreboard"
+        app:layout_constraintStart_toStartOf="@+id/text_view_scoreboard"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_scoreboard">
+
+        <include
+            android:id="@+id/player_team_card"
+            layout="@layout/layout_team_card"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp" />
+
+        <include
+            android:id="@+id/opponents_team_card"
+            layout="@layout/layout_team_card"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_end_of_game_message"
+        android:layout_width="440dp"
+        android:layout_height="37dp"
+        android:text="Awesome, you won"
+        android:textAlignment="center"
+        android:textColor="#08c"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_scoreboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_state_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Get ready. Game starting in few second..."
+        android:textColor="#FF6F00"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <include
+        android:id="@+id/spinner"
+        layout="@layout/spinner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_state_message"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/textView_state_message"
+        app:layout_constraintTop_toBottomOf="@+id/textView_state_message"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

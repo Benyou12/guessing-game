@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:dist="http://schemas.android.com/apk/distribution"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.example.polychat">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".authentication.OAuthActivity"/>
+        <activity android:name=".base.HomeActivity"/>
+        <activity android:name=".settings.PublicProfile"/>
+        <activity android:name=".base.TestCanvas"/>
+        <activity android:name=".base.BaseActivity"/>
+        <activity android:name=".tutorial.TutorialActivity"/>
+        <activity android:name=".game.Game"/>
+        <activity android:name=".authentication.SignUp" />
+        <activity android:name=".messenger.MessengerActivity" />
+        <activity android:name=".settings.UserProfile" />
+        <activity android:name=".authentication.SignIn">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    </application>
+
+</manifest>

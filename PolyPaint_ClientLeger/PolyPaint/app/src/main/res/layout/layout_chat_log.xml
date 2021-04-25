@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="?attr/activityBackground"
+        android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_messages"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/editText_new_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_conversation_name" />
+
+    <EditText
+            android:id="@+id/editText_new_message"
+            android:tag="editText_new_message"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#f2f2f2"
+            android:ems="10"
+            android:hint="Write message ..."
+            android:background="@drawable/rounded_input"
+            android:inputType="textPersonName"
+            android:minWidth="400dp"
+            android:paddingHorizontal="15dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_send_message"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+            android:id="@+id/button_send_message"
+            android:layout_width="110dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/rounded_button"
+            android:paddingHorizontal="15dp"
+            android:tag="button_send_message"
+            android:text="Send"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_new_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText_new_message" />
+
+    <TextView
+        android:id="@+id/textView_conversation_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="?attr/textViewColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/text_view_history"
+            android:tag="text_view_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="History"
+            android:textColor="#08c"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view_messages"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/text_view_leave"
+            android:tag="text_view_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:text="Leave"
+            android:textColor="#08c"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view_messages"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_history"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/text_view_invite"
+            android:visibility="gone"
+            android:tag="text_view_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Invite"
+            android:textColor="#08c"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view_messages"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_leave"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+            android:id="@+id/auto_complete_invitation"
+            android:tag="auto_complete_invitation"
+            android:layout_width="177dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_input"
+            android:hint="Type username"
+            android:visibility="gone"
+            android:paddingHorizontal="20dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view_messages"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_invite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

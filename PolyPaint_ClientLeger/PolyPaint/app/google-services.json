@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "880081131415",
+    "firebase_url": "https://polychat-9c90e.firebaseio.com",
+    "project_id": "polychat-9c90e",
+    "storage_bucket": "polychat-9c90e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880081131415:android:d915d5922f79764a7816d2",
+        "android_client_info": {
+          "package_name": "com.example.polychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880081131415-b52qtaokvsni8e99ev1sg51fd339t8cq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX52OiviCKAqkGfD7iw1hCnGANEGbbJSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880081131415-b52qtaokvsni8e99ev1sg51fd339t8cq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
